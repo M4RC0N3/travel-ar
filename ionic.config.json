@@ -1,0 +1,7 @@
+{
+  "name": "travel-ar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
