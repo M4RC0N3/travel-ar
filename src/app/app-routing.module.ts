@@ -4,16 +4,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { Landing } from '../pages/landing/landing';
 import { SignIn } from '../pages/sign-in/sign-in';
 import { SignUp } from '../pages/sign-up/sign-up';
-import { Home } from '../pages/home/home';
-import { ArView } from '../pages/ar-view/ar-view';
+
 import { PlaceView } from 'src/pages/place-view/place-view';
 import { PlaceNew } from 'src/pages/place-new/place-new';
 import { TripView } from 'src/pages/trip-view/trip-view';
-import { CategorieList } from 'src/pages/categorie-list/categorie-list';
-import { PlaceList } from 'src/pages/place-list/place-list';
-import { TripList } from 'src/pages/trip-list/trip-list';
+
 
 import { redirectUnauthorizedTo, redirectLoggedInTo, canActivate } from '@angular/fire/auth-guard';
+import { TabNavigation } from 'src/components/tab-navigation/tab-navigation';
 
 
 
@@ -48,41 +46,6 @@ const routes: Routes = [
   },
 
   {
-    path: 'home',
-    component: Home,
-    loadChildren: () => import('../pages/home/home.module').then(m => m.HomeModule),
-    ...canActivate(redirectUnauthorizedTologin)
-  },
-
-  {
-    path: 'categorie-list',
-    component: CategorieList,
-    loadChildren: () => import('../pages/categorie-list/categorie-list.module').then(m => m.CategorieListModule),
-    ...canActivate(redirectUnauthorizedTologin)
-  },
-
-  {
-    path: 'place-list',
-    component: PlaceList,
-    loadChildren: () => import('../pages/place-list/place-list.module').then(m => m.PlaceListModule),
-    ...canActivate(redirectUnauthorizedTologin)
-  },
-
-  {
-    path: 'trip-list',
-    component: TripList,
-    loadChildren: () => import('../pages/trip-list/trip-list.module').then(m => m.TripListModule),
-    ...canActivate(redirectUnauthorizedTologin)
-  },
-
-  {
-    path: 'ar-view',
-    component: ArView,
-    loadChildren: () => import('../pages/ar-view/ar-view.module').then(m => m.ArViewModule),
-    ...canActivate(redirectUnauthorizedTologin)
-  },
-
-  {
     path: 'place-view',
     component: PlaceView,
     loadChildren: () => import('../pages/place-view/place-view.module').then(m => m.PlaceViewModule),
@@ -101,6 +64,33 @@ const routes: Routes = [
     component: TripView,
     loadChildren: () => import('../pages/trip-view/trip-view.module').then(m => m.TripViewModule),
     ...canActivate(redirectUnauthorizedTologin)
+  },
+  {
+    path: '',
+    component:TabNavigation,
+    ...canActivate(redirectUnauthorizedTologin),
+    children: [
+      {
+        path: 'home',
+        loadChildren: () => import('../pages/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: 'categorie-list',
+        loadChildren: () => import('../pages/categorie-list/categorie-list.module').then(m => m.CategorieListModule)
+      },
+      {
+        path: 'place-list',
+        loadChildren: () => import('../pages/place-list/place-list.module').then(m => m.PlaceListModule)
+      },
+      {
+        path: 'trip-list',
+        loadChildren: () => import('../pages/trip-list/trip-list.module').then(m => m.TripListModule)
+      },
+      {
+        path: 'ar-view',
+        loadChildren: () => import('../pages/ar-view/ar-view.module').then(m => m.ArViewModule)
+      }
+    ]
   },
 ];
 

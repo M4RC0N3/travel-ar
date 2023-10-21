@@ -1,4 +1,5 @@
 <ion-content>
+    
     <ion-grid>
         <ion-row id="searchbar-container">
             <ion-searchbar class="custom" placeholder="Onde você quer ir?" search-icon="../../assets/icons/search.svg"></ion-searchbar>
@@ -23,6 +24,7 @@
                 <place [data]="{}"></place>
             </ion-col>
         </ion-row>
+        <ion-button type="button" (click)="logout()">test</ion-button>
         <ion-row id="trips-container">
             <ion-col id="header-container" class="ion-no-padding" size="12">
                 <h2>Minhas viagens</h2>
@@ -36,4 +38,3 @@
         <ion-row></ion-row>
     </ion-grid>
 </ion-content>
-<tab-navigation></tab-navigation>

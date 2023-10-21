@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { AuthService } from 'src/services/auth.services';
+import { Router } from '@angular/router';
 @Component({
   selector: 'home',
   templateUrl: 'home.html',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Home {
 
-  constructor() {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
+  logout(){
+    this.router.navigateByUrl('/home', {replaceUrl: true});
+    this.authService.logout();
+  }
 
 }

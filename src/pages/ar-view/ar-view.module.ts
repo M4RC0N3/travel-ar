@@ -10,7 +10,7 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild([{ path: 'ar-view', component: ArView }]),
+    RouterModule.forChild([{ path: '', component: ArView }]),
     ComponentsModule
   ],
   declarations: [ArView]

@@ -15,8 +15,9 @@
 
             <ion-input label="Sua senha" label-placement="floating" fill="outline" placeholder="Enter text" type="password" formControlName="password"></ion-input>
             <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">A senha precisa ter 6 caracteres ou mais!</ion-note>
+
             <ion-router-link [routerLink]="['/forgot-password']">Esqueceu a senha?</ion-router-link>
-            <ion-button type="button" [disabled]="!credentials.valid" (click)="register()" color="primary">
+            <ion-button type="button" [disabled]="!credentials.valid" (click)="signUp()" color="primary">
               Cadastrar
               <ion-ripple-effect type="unbounded"></ion-ripple-effect>
             </ion-button>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/services/auth.services';
-import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
 
@@ -29,23 +29,20 @@ export class SignUp implements OnInit {
   }
 
   get password(){
-    console.log('pass');
     return this.credentials.get('password');
   }
 
-  async register(){
+  async signUp(){
     const loading = await this.loadingController.create();
     await loading.present();
     
-    const user = await this.authService.register(this.credentials.value);
-    await loading.dismiss();
-
-    if(user){
+    this.authService.register(this.credentials.value).then(()=>{
+      loading.dismiss();
       this.router.navigateByUrl('/home', {replaceUrl: true});
-    }
-    else{
+    }).catch(()=>{
+      loading.dismiss();
       this.showAlert('Registration failed', 'Please try again');
-    }
+    });
   }
   async showAlert(header:any, message:any){
     const alert = await this.alertController.create({
