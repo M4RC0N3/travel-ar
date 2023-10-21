@@ -1,0 +1,46 @@
+<ion-header >
+    <ion-toolbar class="custom">
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row id="image-container">
+            <ion-col class="ion-no-padding" size="12">
+              <ion-img src="assets/images/chapada-diamantina.jpg" width="430" height="347"></ion-img>
+            </ion-col>
+        </ion-row>
+        <ion-row id="form-container">
+            <ion-col class="ion-no-padding" size="12">
+                <form action="">
+                    <ion-row>
+                        <ion-col id="checkin-container" class="ion-no-padding" >
+                            <ion-icon src="assets/icons/calendar.svg"></ion-icon>
+                            <p>Data de check in</p>
+                        </ion-col>
+                        <ion-col id="checkout-container" class="ion-no-padding">
+                            <p>Data de check out</p>
+                        </ion-col>
+                    </ion-row>
+                    <p>Qual seu orçamento?</p>
+                    <ion-item id="budget-container">
+                        <ion-icon src="assets/icons/wallet.svg"></ion-icon>
+                        <label for="">{{ budgetFormated }}</label>
+                        <ion-input type="number" (ionInput)="formatCurrency($event)" name="budget"class="custom"></ion-input>
+                    </ion-item>
+                    <p>Quantas pessoas vão viajar?</p>
+                    <ion-item>
+                        <ion-icon src="assets/icons/people.svg"></ion-icon>
+                        <ion-input type="number" class="custom"></ion-input>
+                    </ion-item>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer class="custom">
+    <ion-button routerLink="/trip-view" color="primary">
+      Criar viagem
+      <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+    </ion-button>
+</ion-footer>

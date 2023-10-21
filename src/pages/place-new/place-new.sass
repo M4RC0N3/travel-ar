@@ -1,0 +1,75 @@
+ion-header
+    position: absolute
+    box-shadow: none
+    ion-toolbar.custom
+        --background: rgba(255, 255, 255, 0)
+        ion-back-button
+            float: left
+ion-content
+    --background: var(--ion-color-primary-contrast)
+    ion-grid
+        p
+            color: #324857
+            margin: 0
+        ion-row:first-child
+            padding: 0
+        ion-row
+            padding: 0 20px
+        #image-container
+            ion-col
+                min-height: 67vw
+        #form-container
+            form
+                display: flex
+                flex-direction: column
+                margin-top: -27px
+                ion-row
+                    justify-content: space-between
+                    background-color: #FFF
+                    padding: 15px
+                    border-radius: 10px
+                    border: 1px solid #A7D8FA
+                    margin-bottom:  30px
+                    p
+                        margin: 0
+                        color: #2C2C2C
+                        font-family: 'inter-regular'
+                    ion-col
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                    #checkout-container
+                        justify-content: flex-end
+
+                p
+                    margin: 0
+                    font-family: 'inter-regular'
+                    margin-bottom: 5px
+                ion-item
+                    --background: var(--ion-color-primary-contrast)
+                    border: 1px solid #A7D8FA
+                    border-radius: 10px
+                    max-height: 49px
+                    margin-bottom: 30px
+                    ion-input.custom
+                        min-height: 49px
+                        --background: var(--ion-color-primary-contrast)
+                        color: #2C2C2C
+                        padding-left: 10px !important
+                        font-family: 'inter-regular'
+                #budget-container
+                    position: relative
+                    label
+                        position: absolute
+                        color: #2C2C2C
+                        pointer-events: none
+                        z-index: 10
+                        left: 33px
+                    ion-input.custom
+                        color: #fff !important
+
+ion-footer.custom
+    background-color: var(--ion-color-primary-contrast)
+    padding: 0 20px 30px
+    box-shadow: none
+    @import '../../theme/styles/button'

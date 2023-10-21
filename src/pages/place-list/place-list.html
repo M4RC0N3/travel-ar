@@ -1,0 +1,16 @@
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row id="searchbar-container">
+            <ion-searchbar class="custom" placeholder="Onde você quer ir?" search-icon="../../assets/icons/search.svg"></ion-searchbar>
+        </ion-row>
+        <h2>Lugares</h2>
+        <ion-row id="places-container">
+            <ion-col class="ion-no-padding">
+                <place routerLink="/place-view" [data]="{}"></place>
+            </ion-col>
+            <ion-col class="ion-no-padding">
+                <place routerLink="/place-view" [data]="{}"></place>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

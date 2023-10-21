@@ -1,0 +1,77 @@
+<ion-header >
+    <ion-toolbar class="custom">
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row id="image-container">
+            <ion-col class="ion-no-padding" size="12">
+              <ion-img src="assets/images/chapada-diamantina.jpg" width="430" height="347"></ion-img>
+            </ion-col>
+        </ion-row>
+        <ion-row id="info-basic-container">
+            <ion-col class="ion-no-padding">
+                <span>
+                    <ion-icon src="assets/icons/wallet.svg"></ion-icon>
+                    <p>R$ 4000.00</p>
+                </span>
+            </ion-col>
+            <ion-col class="ion-no-padding">
+                <span>
+                    <ion-icon src="assets/icons/people.svg"></ion-icon>
+                    <p>10</p>
+                </span>
+            </ion-col>
+            <ion-col class="ion-no-padding">
+                <span>
+                    <ion-icon src="assets/icons/star.svg"></ion-icon>
+                    <p>4.5</p>
+                </span>
+            </ion-col>
+        </ion-row>
+        <ion-row id="attractions-container">
+            <p id="title">Atrações</p>
+            <ion-col size="12">
+                <ion-row>
+                <ion-col class="ion-no-padding">
+                    <p>Cachoeira da Fumaça</p>
+                </ion-col>
+                <ion-col class="ion-no-padding">
+                    <p>Gruta da Lapa Doce</p>
+                </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+        <ion-row id="description-container">
+            <p id="title">Detalhes da viagem</p>
+            <ion-col id="description-container" class="ion-no-padding" size="12">
+                <h5>Dia 1: Chegada em Lençóis</h5>
+                <ul>
+                    <li>Chegue a Lençóis, a principal cidade da Chapada Diamantina, de ônibus ou carro. Pesquise as opções de transporte mais econômicas.</li>
+                    <li>Hospede-se em um albergue ou pousada econômica em Lençóis para economizar dinheiro em acomodações. Certifique-se de reservar com antecedência para garantir um bom preço.</li>
+                    <li>Explore a cidade, visite a Praça Horácio de Matos, onde você pode encontrar informações turísticas e fazer um reconhecimento do local.</li>
+                </ul>
+            
+                <h5>Dia 2: Grutas e Cachoeiras</h5>
+                <ul>
+                    <li>Comece o dia visitando a Gruta da Lapa Doce, uma das mais famosas da região.</li>
+                    <li>À tarde, visite a Cachoeira do Sossego, que é acessível por trilha.</li>
+                    <li>Leve seu próprio lanche e água para economizar em refeições.</li>
+                </ul>
+                <h5>Dia 3: Cachoeira da Fumaça</h5>
+                <ul>
+                    <li>Reserve um tour para a Cachoeira da Fumaça. Os tours geralmente incluem transporte, guia e almoço.</li>
+                    <li>Esteja preparado para fazer uma trilha moderadamente longa, mas a vista da cachoeira é incrível e vale a pena.</li>
+                </ul>
+            
+                <h5>Dia 4: Ibicoara</h5>
+                <ul>
+                    <li>Viaje para a cidade de Ibicoara, uma das áreas mais bonitas da Chapada Diamantina.</li>
+                    <li>Fique em uma pousada econômica em Ibicoara.</li>
+                    <li>Explore as atrações locais, como a Cachoeira do Buracão.</li>
+                </ul>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

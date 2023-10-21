@@ -1,0 +1,15 @@
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row id="searchbar-container">
+            <ion-searchbar class="custom" placeholder="Onde você quer ir?" search-icon="../../assets/icons/search.svg"></ion-searchbar>
+        </ion-row>
+        <ion-row id="trips-container">
+            <ion-col id="header-container" class="ion-no-padding" size="12">
+                <h2>Minhas viagens</h2>
+            </ion-col>
+            <ion-col id="trip-list" class="ion-no-padding" size="12">
+                <trip routerLink="/trip-view" [data]="{}"></trip>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

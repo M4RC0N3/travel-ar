@@ -4,7 +4,8 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --box-shadow: none
+  --ion-color-primary: #3DA8F1;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -83,7 +84,7 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: #3DA8F1;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
@@ -153,10 +154,10 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
-    --ion-background-color-rgb: 0,0,0;
+    --ion-background-color: #F0F9FF;
+    --ion-background-color-rgb: 240, 249, 255;
 
-    --ion-text-color: #ffffff;
+    --ion-text-color: #324857;
     --ion-text-color-rgb: 255,255,255;
 
     --ion-color-step-50: #0d0d0d;
@@ -197,8 +198,8 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
-    --ion-background-color-rgb: 18,18,18;
+    --ion-background-color: #F0F9FF;
+    --ion-background-color-rgb: 240, 249, 255;
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;
@@ -229,16 +230,8 @@
 
     --ion-toolbar-background: #1f1f1f;
 
-    --ion-tab-bar-background: #1f1f1f;
+    --ion-tab-bar-background: #fff;
 
     --ion-card-background: #1e1e1e;
   }
-}
-
-html {
-  /* 
-   * For more information on dynamic font scaling, visit the documentation:
-   * https://ionicframework.com/docs/layout/dynamic-font-scaling
-   */
-  --ion-dynamic-font: var(--ion-default-dynamic-font);
 }

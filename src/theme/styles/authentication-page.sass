@@ -1,0 +1,56 @@
+ion-grid
+  padding: 100px 30px 40px 30px
+  height: 100%
+  background-color: #FFF
+  display: grid
+  p
+    margin: 0
+    color: var(--ion-color-primary)
+  ion-img
+    width: 50px
+    height: 30px
+  #form-container
+    #header-container
+      max-height: 30px
+      display: flex
+      justify-content: center
+    #welcome-container
+      display: flex
+      flex-direction: column
+      align-items: center
+      h1
+        font-size: 2.5rem !important
+        font-family: 'inter-bold'
+        color: var(--ion-color-primary)
+        margin: 0
+        text-align: center
+      p
+        max-width: 242px
+        margin: 10px 0 0 0
+        font-family: 'inter-light'
+        color: var(--ion-color-primary)
+        font-size: 1.2rem
+        text-align: center
+    ion-col
+      form
+        display: flex
+        flex-direction: column
+        gap: 15px
+        ion-router-link
+          align-self: end
+        ion-input
+          color: var(--ion-color-primary)
+          --border-color: #fff
+          --border-radius: 8px
+          border: 1px solid var(--ion-color-primary)
+          border-radius: 7px
+
+        @import './button'
+        ion-button
+          margin-top: 60px
+  #dont-account-container
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    p
+      font-family: 'inter-medium'

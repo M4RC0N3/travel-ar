@@ -1,0 +1,75 @@
+ion-header
+    position: absolute
+    box-shadow: none
+    ion-toolbar.custom
+        --background: rgba(255, 255, 255, 0)
+        ion-back-button
+            float: left
+ion-content
+    
+    --background: var(--ion-color-primary-contrast)
+    ion-grid
+        p, ul, li, h5
+            color: #324857
+            margin: 0
+        ion-row:first-child
+            padding: 0
+        #image-container
+            ion-col
+                min-height: 67vw
+        #info-basic-container
+            justify-content: space-between
+            padding: 0 20px
+            margin-top: 15px
+            ion-col,span
+                display: flex
+                span
+                    align-items: center
+                    gap: 5px
+                    ion-icon
+                        width: 30px
+                    p
+                        font-family: 'inter-regular'
+            ion-col:nth-child(2)
+                justify-content: center
+            ion-col:nth-child(3)
+                justify-content: flex-end
+        #attractions-container
+            padding: 0 0 0 20px
+            gap: 10px
+            margin-top: 25px
+            #title
+                font-family: 'roboto-medium'
+                font-size: 1rem
+            ion-col
+                ion-row
+                    flex-wrap: nowrap
+                    overflow-x: auto
+                    padding-bottom: 15px
+                    gap: 10px
+                    ion-col
+                        min-width: fit-content
+                        background-color: #EFF8FE
+                        border: 1px solid #A6D5F5
+                        padding: 5px
+                        border-radius: 5px
+                        display: flex
+                        justify-content: center
+                        p
+                            color: #363636
+                            font-family: 'inter-regular'
+        #description-container
+            padding: 0 20px
+            gap: 10px
+            #title
+                color: 324857
+                font-family: 'roboto-medium'
+                font-size: 1rem
+            #description-container
+                h5
+                    margin-top: 15px
+                    font-family: "inter-bold"
+                ul, li
+                    font-family: 'inter-regular'
+                    text-align: justify
+                    line-height: 1.6rem

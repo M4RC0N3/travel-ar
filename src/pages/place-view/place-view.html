@@ -1,0 +1,54 @@
+<ion-header >
+  <ion-toolbar class="custom">
+    <ion-back-button (click)="goBack()"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row id="image-container">
+      <ion-col class="ion-no-padding" size="12">
+        <ion-img src="assets/images/chapada-diamantina.jpg" width="430" height="347"></ion-img>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row id="basic-data">
+      <ion-col class="ion-no-padding" size="8">
+        <p>Chapada diamantina</p>
+      </ion-col>
+      <ion-col id="rating-container" class="ion-no-padding" size="4">
+        <span>
+          <ion-icon src="assets/icons/star.svg"></ion-icon>
+          <p>4.5</p>
+        </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="attractions-container">
+      <p id="title">Atrações</p>
+      <ion-col size="12">
+        <ion-row>
+          <ion-col class="ion-no-padding">
+            <p>Cachoeira da Fumaça</p>
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            <p>Gruta da Lapa Doce</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row id="description-container">
+      <p id="title">Descrição</p>
+      <ion-col id="description-container" class="ion-no-padding" size="12">
+        <p>
+          A Chapada Diamantina é uma região geográfica localizada no estado da Bahia, Brasil. É conhecida por sua beleza natural deslumbrante, com paisagens diversificadas que incluem cânions, grutas, cachoeiras e formações rochosas impressionantes.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer class="custom">
+  <ion-button routerLink="/place-new" color="primary">
+    Simular viagem
+    <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+  </ion-button>
+</ion-footer>

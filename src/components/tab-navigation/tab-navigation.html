@@ -1,0 +1,22 @@
+<ion-tabs>
+    <ion-tab-bar>
+        <ion-tab-button (click)="navegateTo('/home')" tab="home">
+            <ion-icon src="../../assets/icons/home.svg"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="navegateTo('/categorie-list')" tab="categorie-list">
+            <ion-icon src="../../assets/icons/categorie.svg"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button></ion-tab-button>
+        <ion-tab-button  (click)="navegateTo('/trip-list')" tab="trip-list">
+            <ion-icon src="../../assets/icons/suitcase.svg"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="navegateTo('/ar-view')" tab="ar-view">
+            <ion-icon src="../../assets/icons/ar.svg"></ion-icon>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>
+<ion-fab (click)="navegateTo('/place-list')" vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button tab="air-plane">
+        <ion-icon src="../../assets/icons/air-plane.svg"></ion-icon>
+    </ion-fab-button>
+</ion-fab>

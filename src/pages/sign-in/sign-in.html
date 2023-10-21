@@ -1,0 +1,31 @@
+<ion-content id="sign-in">
+  <ion-grid>
+    <ion-row id="form-container">
+      <ion-col id="header-container" class="ion-no-padding" size="12">
+        <ion-img src="assets/images/blue-logo.svg"></ion-img>
+      </ion-col>
+      <ion-col id="welcome-container" class="ion-no-padding" size="12">
+        <h1>Bem-vindo!</h1>
+        <p>Vamos criar novas jornadas</p>
+      </ion-col>
+      <ion-col class="ion-no-padding" size="12">
+        <form>
+          <ion-input label="Seu email" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+          <ion-input label="Sua senha" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+          <ion-router-link routerLink="/forgot-password">Esqueceu a senha?</ion-router-link>
+          <ion-button routerLink="/home" color="primary">
+            Entrar
+            <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="dont-account-container" class="ion-no-padding" size="12">
+        <ion-router-link routerLink="/sign-up">
+          <p>Eu não tenho conta</p>
+        </ion-router-link>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

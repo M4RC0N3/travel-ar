@@ -1,0 +1,25 @@
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row id="searchbar-container">
+            <ion-searchbar class="custom" placeholder="Onde você quer ir?" search-icon="../../assets/icons/search.svg"></ion-searchbar>
+        </ion-row>
+        <h2>Minhas viagens</h2>
+        <ion-row id="categories-container">
+            <ion-col routerLink="/place-list" class="ion-no-padding" size="5">
+                <categorie [type]="'museum'"></categorie>
+            </ion-col>
+    
+            <ion-col routerLink="/place-list" class="ion-no-padding" size="5">
+                <categorie [type]="'monument'"></categorie>
+            </ion-col>
+    
+            <ion-col routerLink="/place-list" class="ion-no-padding" size="5">
+                <categorie [type]="'park'"></categorie>
+            </ion-col>
+    
+            <ion-col routerLink="/place-list" class="ion-no-padding" size="5">
+                <categorie [type]="'beach'"></categorie>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

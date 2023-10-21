@@ -1,0 +1,18 @@
+<ion-card>
+    <ion-grid class="ion-no-padding no-margin">
+        <ion-row>
+            <ion-col class="ion-no-padding">
+                <img *ngIf="type=='museum'" src="../../assets/images/museum.svg" alt="Museus" width="44" height="44">
+                <img *ngIf="type=='monument'" src="../../assets/images/monument.svg" alt="Monumentos" width="43" height="43">
+                <img *ngIf="type=='park'" src="../../assets/images/park.svg" alt="Parques" width="53" height="39">
+                <img *ngIf="type=='beach'" src="../../assets/images/beach.svg" alt="Mares" width="45" height="40"> 
+            </ion-col>
+            <ion-col>
+                <p *ngIf="type=='museum'">Museus</p>
+                <p *ngIf="type=='monument'">Monumentos</p>
+                <p *ngIf="type=='park'">Parques</p>
+                <p *ngIf="type=='beach'">Mares</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>
