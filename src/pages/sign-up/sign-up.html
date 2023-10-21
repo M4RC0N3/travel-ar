@@ -9,13 +9,15 @@
           <p>Vamos criar novas jornadas</p>
         </ion-col>
         <ion-col class="ion-no-padding" size="12">
-          <form>
-            <ion-input label="Seu nome" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-            <ion-input label="Seu email" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-            <ion-input label="Sua senha" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+          <form [formGroup]="credentials" >
+            <ion-input label="Seu email" label-placement="floating" fill="outline" placeholder="Enter text" type="email" formControlName="email"></ion-input>
+            <ion-note slot="error" *ngIf="(email?.dirty || email?.touched) && email?.errors">Email invalido!</ion-note>
+
+            <ion-input label="Sua senha" label-placement="floating" fill="outline" placeholder="Enter text" type="password" formControlName="password"></ion-input>
+            <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">A senha precisa ter 6 caracteres ou mais!</ion-note>
             <ion-router-link [routerLink]="['/forgot-password']">Esqueceu a senha?</ion-router-link>
-            <ion-button [routerLink]="['/sign-in']" color="primary">
-              Entrar
+            <ion-button type="button" [disabled]="!credentials.valid" (click)="register()" color="primary">
+              Cadastrar
               <ion-ripple-effect type="unbounded"></ion-ripple-effect>
             </ion-button>
           </form>

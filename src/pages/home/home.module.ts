@@ -11,7 +11,7 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild([{ path: '', component: Home }]),
+    
     ComponentsModule
   ],
   declarations: [Home],

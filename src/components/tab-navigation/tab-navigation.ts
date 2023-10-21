@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'tab-navigation',
   templateUrl: 'tab-navigation.html',
@@ -8,10 +8,9 @@ import { NavController } from '@ionic/angular';
 })
 export class TabNavigation {
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private router: Router) {}
   
   navegateTo(page:string) {
-    this.navCtrl.navigateForward(page); // Substitua pelo caminho da página desejada
+    this.router.navigateByUrl(page, {replaceUrl: true}); // Substitua pelo caminho da página desejada
   }
-
 }
