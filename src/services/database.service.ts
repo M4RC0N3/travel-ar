@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { getDatabase, ref, onValue } from '@angular/fire/database';
+import { getDatabase, ref, onValue, query, equalTo, orderByChild } from '@angular/fire/database';
+
 
 @Injectable({
     providedIn: 'root',
@@ -10,7 +11,7 @@ export class DatabaseService {
 
     constructor() {}
 
-    async get(entity:any){
+    async getList(entity:any){
         const endpoint = ref(this.db, entity);
         return new Promise((resolve) =>{
             onValue(endpoint, (snapshot)=>{

@@ -42,7 +42,7 @@
   </ion-grid>
 </ion-content>
 <ion-footer class="custom">
-  <ion-button routerLink="/place-new" color="primary">
+  <ion-button [routerLink]="['/place-new', item?.id]" color="primary">
     Simular viagem
     <ion-ripple-effect type="unbounded"></ion-ripple-effect>
   </ion-button>

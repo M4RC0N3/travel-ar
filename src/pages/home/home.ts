@@ -27,13 +27,13 @@ export class Home {
   }
 
   async getCategories(){
-    this.databaseService.get('categories/').then(data=>{
+    this.databaseService.getList('categories/').then(data=>{
       this.categories = data;
     })
   }
 
   async getPlaces(){
-    this.databaseService.get('places/').then(data=>{
+    this.databaseService.getList('places/').then(data=>{
       this.places = data;
     });
   }
@@ -41,5 +41,7 @@ export class Home {
   async ionViewDidEnter(){
     this.getPlaces();
     this.getCategories();
+
+    console.log(this.auth.currentUser);
   }
 }

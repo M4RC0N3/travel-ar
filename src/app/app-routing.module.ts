@@ -53,7 +53,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'place-new',
+    path: 'place-new/:id',
     component: PlaceNew,
     loadChildren: () => import('../pages/place-new/place-new.module').then(m => m.PlaceNewModule),
     ...canActivate(redirectUnauthorizedTologin)

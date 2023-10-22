@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-import { getDatabase } from '@angular/fire/database';
+
 import { DatabaseService } from 'src/services/database.service';
 import { AlertController } from '@ionic/angular';
+import { getDatabase, ref, onValue, query, equalTo, get, orderByChild, onChildAdded  } from '@angular/fire/database';
 @Component({
   selector: 'place-view',
   templateUrl: 'place-view.html',
@@ -19,6 +20,7 @@ export class PlaceView {
     private databaseService: DatabaseService,
     private alertController: AlertController
   ) {}
+
   goBack() {
     this.navCtrl.back();
   }
@@ -29,13 +31,11 @@ export class PlaceView {
       this.placeId = id;
     });
 
-    this.databaseService.get(`places/${this.placeId}`).then(data=>{
-      console.log(data);
+    this.databaseService.getList(`places/${this.placeId}`).then(data=>{
       this.item = data;
     }).catch(()=>{
-      this.showAlert('Falha ao buscar dados', 'Não foi possível buscar os dados do lugar')
+      this.showAlert('Erro na busca', 'Erros ao buscar o lugar')
     });
-
   }
   async showAlert(header:any, message:any){
     const alert = await this.alertController.create({
