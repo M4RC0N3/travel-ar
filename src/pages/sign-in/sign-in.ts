@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/services/auth.services';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
   templateUrl: 'sign-in.html',
   styleUrls: ['sign-in.sass'],
 })
-export class SignIn {
+export class SignIn implements OnInit {
   credentials!: FormGroup;
   constructor(
     private fb: FormBuilder,

@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['place.sass'],
 })
 export class Place {
-  @Input() data!: Object;
+  @Input() data!: any;
   constructor() {}
 }

@@ -46,7 +46,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'place-view',
+    path: 'place-view/:id',
     component: PlaceView,
     loadChildren: () => import('../pages/place-view/place-view.module').then(m => m.PlaceViewModule),
     ...canActivate(redirectUnauthorizedTologin)
