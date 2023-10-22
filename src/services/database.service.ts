@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { getDatabase, ref, onValue, query, equalTo, orderByChild } from '@angular/fire/database';
+import { getDatabase, ref, onValue,  set} from '@angular/fire/database';
 
 
 @Injectable({
@@ -20,4 +20,5 @@ export class DatabaseService {
             })
         })
     }
+
 }

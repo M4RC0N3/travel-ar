@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { DatabaseService } from 'src/services/database.service';
 import { AlertController } from '@ionic/angular';
-import { getDatabase, ref, onValue, query, equalTo, get, orderByChild, onChildAdded  } from '@angular/fire/database';
+import { getDatabase } from '@angular/fire/database';
 @Component({
   selector: 'place-view',
   templateUrl: 'place-view.html',
